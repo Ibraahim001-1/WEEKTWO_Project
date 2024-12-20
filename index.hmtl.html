@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal View</title>
+    <!-- CSS for layout and styling -->
+    <style>
+        /* Reset and Basic Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding:0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 2;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+         /* Header and Navigation Styles */
+         .header {
+            background-color: #262626;
+            color: #f7f7f7;
+            text-align: center;
+            padding: 40px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav img {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            transition: transform 0.3s;
+        }
+
+        .nav img:hover {
+            transform: rotate(25deg);
+        } 
+
+
+        /* Header and Navigation Styles
+        */
+        /* .header {
+            background-color: #262626;
+            color: #f7f7f7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+            padding: 60px;
+            width: 90%;
+            height: 275px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+          
+            /* background-color: #f0f0f0; Example background color */
+        
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: .5em;
+            font-weight: 700;
+            letter-spacing: 5px;
+            
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center; /* Center the nav items */
+            padding: 10px 0; /* Add padding around the nav */
+            background-color: #f2f2f2; /* Optional background color */
+            border-radius: 10px; /* Round the corners of the nav */
+            }
+
+        .nav a {
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            margin: 0 15px; /* Add space between the links */
+            color: #333; /* Icon and text color */
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold; /* Make the text bold */
+            transition: transform 0.3s; /* Add transition for hover effect */
+            }
+
+        .nav a:hover {
+            transform: scale(1.1); /* Slightly increase size on hover */
+            }   
+
+        .nav img {
+            width:30px; /* Set width for icons */
+            height: 30px; /* Set height for icons */
+            margin-right: 8px; /* Space between icon and text */
+            transition: transform 0.3s; /* Transition for hover effect */
+            }
+
+        .nav img:hover {
+            transform: rotate(25deg); /* Slight rotation on hover */
+            }
+
+
+        /* Main Content and Sections */
+        .main-content {
+            max-width: 850px;
+            margin: 30px 20xp auto;
+            padding: 20px;
+            
+        }
+        .section {
+            margin: 30px 0;
+            margin: 0 auto;
+            width: 85%;
+            padding: 40px;
+            margin-bottom: 25px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 2em;
+            /* border-bottom:4px solid #444; */
+            padding-bottom: 8px;
+            padding: 15px 1;
+            color: #333;
+        }
+
+        /* About Me Section */
+        
+        #about-me img {
+            float: left;
+            margin-top: 15px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        #about-me p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        #about-me aside {
+            margin-top: 15px;
+            margin-left: 240px;
+            float: top;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }   
+        
+         /* Hobbies Section */
+        #hobbies-section {
+         background-color: #f9f9f9;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+         font-size: 2em;
+         color: #333;
+        border-bottom: 2px solid #444;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        }
+
+        .hobbies-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .hobby-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hobby-item:last-child {
+        border-bottom: none;
+        }
+
+        .hobby-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 5px;
+        }
+
+        .hobby-description {
+        font-size: 1em;
+        color: #555;
+        margin-left: 15px;
+        line-height: 1.6;
+        }
+        /* Media Section */
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .media-container audio,
+        .media-container video {
+            width: 100%;
+        }
+
+        /* Table Styling */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 1em;
+        }
+        .table th {
+            background-color: #444;
+            color: white;
+        }
+        .table td {
+            background-color: #fafafa;
+        }
+
+        /* Useful Links Styling */
+        #useful-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #useful-links li {
+            margin-bottom: 10px;
+        }
+        #useful-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        #useful-links a:hover {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        /* Form Styles */
+        .form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            font-size: 1.1em;
+        }
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #fefefe;
+        }
+        .form input[type="radio"],
+        .form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .form button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #262626;
+            color: #e0e0e0;
+            font-size: 0.9em;
+            border-top: 4px solid #444;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a img.icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .footer a img.icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="boy.png">
+</head>
+<body>
+    <!-- Page Header -->
+
+    <header>
+        <section class="header">
+            <!-- Lordicon Animation with hover effect -->
+            <div class="icon-container">
+                <lord-icon src="https://cdn.lordicon.com/kgwqxfas.json" trigger="hover" style="width: 100px; height: 100px;"></lord-icon>
+            </div>
+            <h1>Ibraahim Maxamuud</h1>
+            <nav class="nav">
+                <a href="#about-me"><img src="info.png" alt="about-me">About Me</a>
+                <a href="#hobbies-section"><img src="puzzle.png" alt="my-hobbies">My Hobbies</a>
+                <a href="#media"><img src="audio.png" alt="Media">Media</a>
+                <a href="#location"><img src="placeholder.png" alt="location">Location</a>
+                <a href="#friends-hobbies"><img src="friends.png" alt="friends-hobbies">Friends' Hobbies</a>
+                <a href="#useful-links"><img src="link.png" alt="useful-links">Useful Links</a>
+                <a href="#feedback"><img src="feedback.png" alt="Feedback">Feedback</a>
+            </nav>
+        </section>
+    </header>
+    <!-- About Me Section -->
+    <section class="section" id="about-me">   
+        <h2 class="section-title">About Me</h2>
+        <figure>
+            <img src="ibraahim.jpg" alt="Waa sawirkaygii" style="height: 250px; width: 200px;">
+            <figcaption>Ibraahim Maxamuud</figcaption>
+        </figure>
+        <p>I am a dedicated business professional with a strong background in managing and growing successful ventures. <br>
+            My focus is on delivering value, fostering innovation, and creating impactful solutions.</p>
+        <p>With a passion for education, I am committed to promoting learning opportunities in coding and technology, <br>
+            empowering individuals for a tech-driven future.</p>
+        <aside>
+            <h4>Education-Tech</h4>
+            <p>Education-Tech is revolutionizing learning by making knowledge more accessible, engaging,
+                 and personalized through technology.</p>
+        </aside>
+        
+    </section>
+        <!-- Hobbies part -->
+        
+    </section>
+    <!-- Hobbies Section -->
+    <section class="section" id="hobbies-section">
+        <h2 class="section-title">My Hobbies</h2>
+    
+        <ul class="hobbies-list">
+            <li class="hobby-item">
+                <dl>
+                    <!-- <dt class="fas fa-plane" > Travelling</dt>  Plane icon -->
+                    <dt class="hobby-title"  >Travelling</dt>
+                    <dd class="hobby-description">Exploring new places, experiencing diverse cultures, and meeting people from various backgrounds to broaden my perspectives.</dd>
+                </dl>
+            </li>
+            <li class="hobby-item">
+                <dl>
+                    <dt class="hobby-title">Reading</dt>
+                    <dd class="hobby-description">Engaging with a wide range of subjects from fiction to technology as part of my commitment to lifelong learning.</dd>
+                </dl>
+            </li>
+            <li class="hobby-item">
+                <dl>
+                    <dt class="hobby-title">Coding</dt>
+                    <dd class="hobby-description">A passion and skill that allows me to innovate and bring ideas to life through technology.</dd>
+                </dl>
+            </li>
+            <li class="hobby-item">
+                <dl>
+                    <dt class="hobby-title">Leadership</dt>
+                    <dd class="hobby-description">Guiding teams, inspiring growth, fostering teamwork, and driving collective success.</dd>
+                </dl>
+            </li>
+            <li class="hobby-item">
+                <dl>
+                    <dt class="hobby-title">Education</dt>
+                    <dd class="hobby-description">Promoting knowledge and empowerment through technology-driven education for a stronger future.</dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
+
+
+    <!-- Media Section -->
+    <section class="section media-container" id="media">
+        <h2 class="section-title">Media</h2>
+        <audio controls autoplay>
+            <source src="perfect-beauty.mp3" type="audio/mp3"> 
+        </audio>
+        <video controls , autoplay>
+            <source src="video.mp4" type="video/mp4" y>
+        </video>
+    </section>
+
+    <!-- Location Section -->
+<section class="section" id="location">
+    <h2 class="section-title">Location</h2>
+    <!-- Replace "YOUR_EMBED_URL" with the actual Google Maps embed link -->
+    <iframe src="https://www.google.com/maps/embed" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+</section>
+
+
+    <!-- Friends' Hobbies Section -->
+    <section class="section" id="friends-hobbies">
+        <h2 class="section-title">Friends' Hobbies</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Favorite Hobby</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cali</td>
+                    <td>22</td>
+                    <td>Reading</td>
+                </tr>
+                <tr>
+                    <td>Maxamed</td>
+                    <td>29</td>
+                    <td>Hiking</td>
+                </tr>
+                <tr>
+                    <td>Mustafa</td>
+                    <td>25</td>
+                    <td>Traveling</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Useful Links Section -->
+    <section class="section" id="useful-links">
+        <h2 class="section-title">Useful Links</h2>
+        <ul>
+            <li><a href="https://www.flaticon.com/" target="_blank">flaticon</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
+            <li><a href="https://www.udemy.com/" target="_blank">ude</a></li>
+            <li><a href="https://365datascience.com/" target="_blank">365datascience</a></li>
+        </ul>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="section" id="feedback">
+         <h2 class="section-title">Feedback</h2>
+        <form class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Your comments here..." required></textarea>
+            <button type="submit">Send</button> <br> <br>
+        </form>
+
+        <!-- Subscription Form Section -->
+        <form id="subscribe-form" class="form">
+            <h2 class="section-title">Subscribe to Our Newsletter</h2>
+            <label>Rating:</label>
+            <label><input type="radio" name="rating" value="excellent" required> Excellent</label>
+            <label><input type="radio" name="rating" value="good"> Good</label>
+            <label><input type="radio" name="rating" value="fair"> Fair</label>
+            <label><input type="radio" name="rating" value="poor"> Poor</label>
+            <label for="subscribe-email" >Email:</label>
+            <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+    
+        </form>
+    </section>
+
+    
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Ibraahim Maxamuud - All Rights Reserved</p>
+        <a href="https://facebook.com"><img src="facebook.png" alt="Facebook" class="icon"></a>
+        <a href="https://X.com"><img src="twitter.png" alt="x" class="icon"></a>
+    </footer>
+</body>
+</html>
